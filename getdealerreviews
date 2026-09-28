@@ -1,0 +1,4 @@
+curl http://127.0.0.1:8000/djangoapp/reviews/dealer/1
+
+Output:
+{"status": 200, "reviews": []}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Best Cars Dealership</title>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .contact-banner {
+      background: linear-gradient(135deg, #00ced1 0%, #1e90ff 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .contact-banner h1 { font-size: 2.5rem; font-weight: 700; }
+    .contact-banner p { font-size: 1.1rem; opacity: 0.9; max-width: 500px; margin: 10px auto 0; }
+    .contact-section { max-width: 900px; margin: 0 auto 60px; padding: 0 20px; }
+    .contact-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+      padding: 40px;
+      margin-bottom: 30px;
+    }
+    .contact-item { display: flex; align-items: flex-start; margin-bottom: 28px; }
+    .contact-icon {
+      font-size: 2rem;
+      margin-right: 20px;
+      min-width: 50px;
+      text-align: center;
+    }
+    .contact-label { font-weight: 700; color: #1e3a5f; margin-bottom: 4px; font-size: 1rem; }
+    .contact-value { color: #555; font-size: 0.95rem; }
+    .contact-value a { color: #1e90ff; text-decoration: none; }
+    .contact-value a:hover { text-decoration: underline; }
+    .hours-table td { padding: 4px 16px 4px 0; color: #555; font-size: 0.9rem; }
+    .map-placeholder {
+      background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+      border-radius: 10px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00838f;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkturquoise; height: 70px;">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold fs-4" href="/">&#x1F697; Best Cars</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" style="font-size: larger;" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="contact-banner">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you. Reach out to us through any of the channels below.</p>
+</div>
+
+<div class="contact-section">
+  <div class="contact-card">
+
+    <div class="contact-item">
+      <div class="contact-icon">&#x1F4CD;</div>
+      <div>
+        <div class="contact-label">Headquarters Address</div>
+        <div class="contact-value">
+          1234 Auto Drive, Suite 100<br>
+          Chicago, Illinois 60601<br>
+          United States
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">&#x1F4DE;</div>
+      <div>
+        <div class="contact-label">Phone Numbers</div>
+        <div class="contact-value">
+          Toll-Free: <a href="tel:+18005550199">+1 (800) 555-0199</a><br>
+          Sales: <a href="tel:+13125550100">+1 (312) 555-0100</a><br>
+          Support: <a href="tel:+13125550101">+1 (312) 555-0101</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">&#x1F4E7;</div>
+      <div>
+        <div class="contact-label">Email Addresses</div>
+        <div class="contact-value">
+          General: <a href="mailto:info@bestcars.com">info@bestcars.com</a><br>
+          Sales: <a href="mailto:sales@bestcars.com">sales@bestcars.com</a><br>
+          Support: <a href="mailto:support@bestcars.com">support@bestcars.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">&#x1F55B;</div>
+      <div>
+        <div class="contact-label">Business Hours</div>
+        <div class="contact-value">
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 7:00 PM CST</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 5:00 PM CST</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">&#x1F310;</div>
+      <div>
+        <div class="contact-label">Social Media</div>
+        <div class="contact-value">
+          <a href="#">@BestCarsUSA</a> on Twitter &nbsp;|&nbsp;
+          <a href="#">Best Cars Dealership</a> on Facebook &nbsp;|&nbsp;
+          <a href="#">@bestcars.official</a> on Instagram
+        </div>
+      </div>
+    </div>
+
+    <div class="map-placeholder">
+      &#x1F5FA;&nbsp; 1234 Auto Drive, Chicago, IL 60601 — Find us on Google Maps
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

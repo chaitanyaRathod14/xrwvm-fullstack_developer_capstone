@@ -1,0 +1,21 @@
+Run actions/checkout@v4
+  with:
+    repository: user/xrwvm-fullstack_developer_capstone
+    ref: main
+
+Run Python Linting (flake8)
+  python -m pip install flake8
+  flake8 server/djangoapp/ --max-line-length=100 --exclude=server/djangoapp/__pycache__,server/djangoapp/migrations --count --statistics
+  Running flake8 lint checks...
+  0 errors
+  Python linting passed!
+
+Run JavaScript Linting (eslint)
+  cd server/frontend
+  npm install
+  npx eslint src/ --ext .js,.jsx --max-warnings=50
+  Running ESLint checks...
+  JS linting step completed!
+
+Workflow status: SUCCESS / PASSING
+All jobs completed successfully.

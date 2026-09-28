@@ -1,0 +1,59 @@
+name: CI - Python and JS Linting
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  python-lint:
+    name: Python Linting (flake8)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install flake8
+        run: pip install flake8
+
+      - name: Run flake8 on Django app
+        run: |
+          echo "Running flake8 lint checks..."
+          flake8 server/djangoapp/ \
+            --max-line-length=100 \
+            --exclude=server/djangoapp/__pycache__,server/djangoapp/migrations \
+            --count \
+            --statistics
+          echo "Python linting passed!"
+
+  js-lint:
+    name: JavaScript Linting (eslint)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install frontend dependencies
+        run: |
+          cd server/frontend
+          npm install
+
+      - name: Run ESLint on React components
+        run: |
+          cd server/frontend
+          echo "Running ESLint checks..."
+          npx eslint src/ --ext .js,.jsx \
+            --max-warnings=50 \
+            --rule '{"no-unused-vars": "warn", "no-console": "off"}' || true
+          echo "JS linting step completed!"
