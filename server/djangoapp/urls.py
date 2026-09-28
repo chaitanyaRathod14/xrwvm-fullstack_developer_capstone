@@ -16,9 +16,11 @@ urlpatterns = [
 
     # path for get all dealers
     path('get_dealers', views.get_dealerships, name='get_dealers'),
+    path('fetchDealers', views.get_dealerships, name='fetch_dealers'),
 
     # path for get dealers by state
     path('get_dealers/<str:state>', views.get_dealerships, name='get_dealers_by_state'),
+    path('fetchDealers/<str:state>', views.get_dealerships, name='fetch_dealers_by_state'),
 
     # path for dealer reviews view
     path('reviews/dealer/<int:dealer_id>', views.get_dealer_reviews, name='dealer_reviews'),
